@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdón, mi amor</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+    .pantalla { display: none; }
+    .activa { display: block; }
+    button { padding: 10px 20px; font-size: 16px; margin-top: 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="pantalla1" class="pantalla activa">
+    <h1>Lo siento muchísimo, mi amor</h1>
+    <p>¿Puedo explicarte lo que pasó?</p>
+    <button onclick="siguiente(2)">Siguiente</button>
+  </div>
+
+  <div id="pantalla2" class="pantalla">
+    <h1>Te amo con todo mi corazón</h1>
+    <p>No quiero que estemos enojados, eres lo más importante para mí.</p>
+    <button onclick="siguiente(3)">Siguiente</button>
+  </div>
+
+  <div id="pantalla3" class="pantalla">
+    <h1>¿Me perdonas?</h1>
+    <button onclick="alert('¡Gracias por perdonarme, mi amor!')">Sí</button>
+  </div>
+
+  <script>
+    function siguiente(num) {
+      document.querySelector('.activa').classList.remove('activa');
+      document.getElementById('pantalla' + num).classList.add('activa');
+    }
+  </script>
+</body>
+</html>

@@ -8,24 +8,29 @@
     body { text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
     .pantalla { display: none; }
     .activa { display: block; }
+    img { width: 300px; border-radius: 10px; }
     button { padding: 10px 20px; font-size: 16px; margin-top: 20px; cursor: pointer; }
   </style>
 </head>
 <body>
+
   <div id="pantalla1" class="pantalla activa">
     <h1>Lo siento muchísimo, mi amor</h1>
+    <img src="IMAGEN1.jpeg" alt="Imagen de disculpa">
     <p>¿Puedo explicarte lo que pasó?</p>
     <button onclick="siguiente(2)">Siguiente</button>
   </div>
 
   <div id="pantalla2" class="pantalla">
-    <h1>Te amo con todo mi corazón</h1>
+    <h1>Te amo con todo mi corazón ❤️</h1>
+    <img src="imagen2.jpeg" alt="Imagen de amor">
     <p>No quiero que estemos enojados, eres lo más importante para mí.</p>
     <button onclick="siguiente(3)">Siguiente</button>
   </div>
 
   <div id="pantalla3" class="pantalla">
-    <h1>¿Me perdonas?</h1>
+    <h1>¿Me perdonas? 🥺</h1>
+    <img src="WhatsApp Image 2025-02-12 at 9.23.53 PM.jpeg" alt="Imagen de perdón">
     <button onclick="alert('¡Gracias por perdonarme, mi amor!')">Sí</button>
   </div>
 
@@ -35,5 +40,6 @@
       document.getElementById('pantalla' + num).classList.add('activa');
     }
   </script>
+
 </body>
 </html>
